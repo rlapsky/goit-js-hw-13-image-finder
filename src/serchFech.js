@@ -18,7 +18,7 @@ function findPicture(e) {
     pixabayService.fetchHits()
      .then(hits => {
        renderPictures(hits)
-       
+       console.log(this.page);
      });
      ref.button.style.display = "";
 }
@@ -31,7 +31,7 @@ function renderPictures(data) {
 }
 
 function onMore() {
-
+    pixabayService.incrementPage()
     pixabayService.fetchHits()
      .then(hits => {
        renderPictures(hits)

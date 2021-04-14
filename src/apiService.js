@@ -11,10 +11,9 @@ export default class PixabayService {
          return fetch(`${URL}/?image_type=photo&orientation=horizontal&q=${this.searchQuery}&page=${this.page}&per_page=12&key=${TOKEN}`)
             .then(response => response.json())
              .then(({hits}) => {
-                this.incrementPage();
-                return hits;
-        });
-    }
+                 return hits;
+                });
+            }
     
     incrementPage(){
         this.page += 1;
