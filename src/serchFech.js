@@ -40,7 +40,6 @@ function onMore() {
 }
 
 function scrollPage() {
-    let position = 0;
     window.scrollTo({
       top: document.querySelector('body').scrollHeight,
       left: 0,
